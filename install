@@ -1,4 +1,4 @@
 #eval echo ~$USER
 mkdir -p $HOME/scripts
 cp ./scripts/* $HOME/scripts
-echo "PATH=$PATH:$HOME/scripts" >> $HOME/.bashrc
+echo "export PATH=\$PATH:\$HOME/scripts" >> $HOME/.bashrc
