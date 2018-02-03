@@ -1,0 +1,12 @@
+usage ()
+{
+  echo "Usage : $0 number_of_last_commits"
+  exit
+}
+
+if [ "$#" -lt 1 ]
+then
+  usage
+fi
+
+git reset HEAD~$1

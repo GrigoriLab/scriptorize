@@ -1,0 +1,14 @@
+usage ()
+{
+  echo "Usage : $0 first_index last_index"
+  exit
+}
+
+if [ "$#" -lt 2 ]
+then
+  usage
+fi
+
+for i in `seq $1 $2`
+do git stash drop stash@{$1}
+done

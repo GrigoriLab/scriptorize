@@ -1,0 +1,6 @@
+#cd `git rev-parse --show-toplevel` #go to git root dir
+# git status --porcelain | sed -n -e '/ M/p' | sed s/^...//   #show file path related to root
+#git status -s | sed -n -e '/ M/p'| cut -c4-
+git status -s | sed -n -e '/ M/p'| sed s/^...//
+
+
