@@ -1,3 +1,3 @@
-PASS='war%40t'
-UNAME='grigori'
-git pull "https://${UNAME}:${PASS}@gitlab.com/draft.git" master
+PASS=''
+UNAME=''
+git pull "https://${UNAME}:${PASS}@github.com/scriptorize.git" master
