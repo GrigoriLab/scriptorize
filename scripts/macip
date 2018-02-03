@@ -1,0 +1,4 @@
+VM_IP=`hostname -I |awk '{print $1}'`
+VM_MAC=`ifconfig |grep -B 1 $VM_IP |grep HWaddr |awk '{print $5}'`
+USER_NAME=`git config --global user.name`
+echo "User: ${USER_NAME}, IP=${VM_IP}, MAC=${VM_MAC}"
