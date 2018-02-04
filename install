@@ -1,4 +1,8 @@
 #eval echo ~$USER
 mkdir -p $HOME/scripts
 cp ./scripts/* $HOME/scripts
-echo "export PATH=\$PATH:\$HOME/scripts" >> $HOME/.bashrc
+if grep -q '^export PATH=\$PATH:\$HOME/scripts' $HOME/.bashrc 
+ then exit 0
+ else  echo "export PATH=\$PATH:\$HOME/scripts" >> $HOME/.bashrc
+fi
+
