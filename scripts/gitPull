@@ -1,3 +1,14 @@
-PASS=''
-UNAME=''
+usage ()
+{
+  echo "Usage : $0 user password"
+  echo "Note that password should be percent-encoded"
+  exit
+}
+
+if [ "$#" -lt 1 ]
+then
+  usage
+fi
+UNAME=$1
+PASS=$2
 git pull "https://${UNAME}:${PASS}@github.com/scriptorize.git" master
